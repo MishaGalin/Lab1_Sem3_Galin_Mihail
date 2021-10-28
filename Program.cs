@@ -14,7 +14,6 @@ namespace Lab1_Sem3_Galin_Mihail
         [STAThread]
         private static void Main()
         {
-            Console.WriteLine("123");
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
