@@ -6,14 +6,15 @@ using System.Windows.Forms;
 
 namespace Lab1_Sem3_Galin_Mihail
 {
-    static class Program
+    internal static class Program
     {
         /// <summary>
         /// Главная точка входа для приложения.
         /// </summary>
         [STAThread]
-        static void Main()
+        private static void Main()
         {
+            Console.WriteLine("123");
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
