@@ -33,21 +33,21 @@ namespace Lab1_Sem3_Galin_Mihail
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.GroupBox = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.lastNameLabel = new System.Windows.Forms.Label();
+            this.firstNameLabel = new System.Windows.Forms.Label();
+            this.patronymicLabel = new System.Windows.Forms.Label();
+            this.classLabel = new System.Windows.Forms.Label();
+            this.lastNameBox = new System.Windows.Forms.TextBox();
+            this.firstNameBox = new System.Windows.Forms.TextBox();
+            this.patronymicBox = new System.Windows.Forms.TextBox();
+            this.classBox = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.easyRadioButton = new System.Windows.Forms.RadioButton();
+            this.numOfTasksLabel = new System.Windows.Forms.Label();
+            this.numOfTasks = new System.Windows.Forms.NumericUpDown();
+            this.hardRadioButton = new System.Windows.Forms.RadioButton();
+            this.createTaskButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.SuspendLayout();
@@ -56,7 +56,7 @@ namespace Lab1_Sem3_Galin_Mihail
             this.tableLayoutPanel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numOfTasks)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -70,10 +70,6 @@ namespace Lab1_Sem3_Galin_Mihail
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.Controls.Add(this.tableLayoutPanel1);
-            // 
-            // splitContainer1.Panel2
-            // 
-            this.splitContainer1.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel2_Paint);
             this.splitContainer1.Size = new System.Drawing.Size(534, 491);
             this.splitContainer1.SplitterDistance = 431;
             this.splitContainer1.SplitterWidth = 5;
@@ -106,21 +102,20 @@ namespace Lab1_Sem3_Galin_Mihail
             this.GroupBox.TabIndex = 0;
             this.GroupBox.TabStop = false;
             this.GroupBox.Text = "Ученик";
-            this.GroupBox.Enter += new System.EventHandler(this.GroupBox_Enter);
             // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 130F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Controls.Add(this.label2, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.label3, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.label4, 0, 2);
-            this.tableLayoutPanel2.Controls.Add(this.label5, 0, 3);
-            this.tableLayoutPanel2.Controls.Add(this.textBox1, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.textBox2, 1, 1);
-            this.tableLayoutPanel2.Controls.Add(this.textBox3, 1, 2);
-            this.tableLayoutPanel2.Controls.Add(this.comboBox1, 1, 3);
+            this.tableLayoutPanel2.Controls.Add(this.lastNameLabel, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.firstNameLabel, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.patronymicLabel, 0, 2);
+            this.tableLayoutPanel2.Controls.Add(this.classLabel, 0, 3);
+            this.tableLayoutPanel2.Controls.Add(this.lastNameBox, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.firstNameBox, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.patronymicBox, 1, 2);
+            this.tableLayoutPanel2.Controls.Add(this.classBox, 1, 3);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 22);
@@ -132,6 +127,84 @@ namespace Lab1_Sem3_Galin_Mihail
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(520, 242);
             this.tableLayoutPanel2.TabIndex = 0;
+            // 
+            // lastNameLabel
+            // 
+            this.lastNameLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lastNameLabel.AutoSize = true;
+            this.lastNameLabel.Location = new System.Drawing.Point(39, 20);
+            this.lastNameLabel.Name = "lastNameLabel";
+            this.lastNameLabel.Size = new System.Drawing.Size(88, 20);
+            this.lastNameLabel.TabIndex = 0;
+            this.lastNameLabel.Text = "Фамилия";
+            // 
+            // firstNameLabel
+            // 
+            this.firstNameLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.firstNameLabel.AutoSize = true;
+            this.firstNameLabel.Location = new System.Drawing.Point(84, 80);
+            this.firstNameLabel.Name = "firstNameLabel";
+            this.firstNameLabel.Size = new System.Drawing.Size(43, 20);
+            this.firstNameLabel.TabIndex = 1;
+            this.firstNameLabel.Text = "Имя";
+            // 
+            // patronymicLabel
+            // 
+            this.patronymicLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.patronymicLabel.AutoSize = true;
+            this.patronymicLabel.Location = new System.Drawing.Point(36, 140);
+            this.patronymicLabel.Name = "patronymicLabel";
+            this.patronymicLabel.Size = new System.Drawing.Size(91, 20);
+            this.patronymicLabel.TabIndex = 2;
+            this.patronymicLabel.Text = "Отчество";
+            // 
+            // classLabel
+            // 
+            this.classLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.classLabel.AutoSize = true;
+            this.classLabel.Location = new System.Drawing.Point(68, 201);
+            this.classLabel.Name = "classLabel";
+            this.classLabel.Size = new System.Drawing.Size(59, 20);
+            this.classLabel.TabIndex = 3;
+            this.classLabel.Text = "Класс";
+            // 
+            // lastNameBox
+            // 
+            this.lastNameBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lastNameBox.Location = new System.Drawing.Point(133, 17);
+            this.lastNameBox.Name = "lastNameBox";
+            this.lastNameBox.Size = new System.Drawing.Size(300, 26);
+            this.lastNameBox.TabIndex = 4;
+            // 
+            // firstNameBox
+            // 
+            this.firstNameBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.firstNameBox.Location = new System.Drawing.Point(133, 77);
+            this.firstNameBox.Name = "firstNameBox";
+            this.firstNameBox.Size = new System.Drawing.Size(300, 26);
+            this.firstNameBox.TabIndex = 5;
+            // 
+            // patronymicBox
+            // 
+            this.patronymicBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.patronymicBox.Location = new System.Drawing.Point(133, 137);
+            this.patronymicBox.Name = "patronymicBox";
+            this.patronymicBox.Size = new System.Drawing.Size(300, 26);
+            this.patronymicBox.TabIndex = 6;
+            // 
+            // classBox
+            // 
+            this.classBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.classBox.FormattingEnabled = true;
+            this.classBox.Items.AddRange(new object[] {
+            "9А",
+            "9Б",
+            "10А",
+            "10Б"});
+            this.classBox.Location = new System.Drawing.Point(133, 200);
+            this.classBox.Name = "classBox";
+            this.classBox.Size = new System.Drawing.Size(300, 28);
+            this.classBox.TabIndex = 7;
             // 
             // panel1
             // 
@@ -147,11 +220,11 @@ namespace Lab1_Sem3_Galin_Mihail
             this.tableLayoutPanel3.ColumnCount = 2;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Controls.Add(this.radioButton2, 1, 1);
-            this.tableLayoutPanel3.Controls.Add(this.label1, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.numericUpDown1, 1, 0);
-            this.tableLayoutPanel3.Controls.Add(this.radioButton1, 0, 1);
-            this.tableLayoutPanel3.Controls.Add(this.button1, 0, 2);
+            this.tableLayoutPanel3.Controls.Add(this.easyRadioButton, 1, 1);
+            this.tableLayoutPanel3.Controls.Add(this.numOfTasksLabel, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.numOfTasks, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.hardRadioButton, 0, 1);
+            this.tableLayoutPanel3.Controls.Add(this.createTaskButton, 0, 2);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
@@ -163,141 +236,75 @@ namespace Lab1_Sem3_Galin_Mihail
             this.tableLayoutPanel3.Size = new System.Drawing.Size(526, 150);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
-            // label1
+            // easyRadioButton
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(3, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Кол-во";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.easyRadioButton.AutoSize = true;
+            this.easyRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.easyRadioButton.Location = new System.Drawing.Point(266, 53);
+            this.easyRadioButton.Name = "easyRadioButton";
+            this.easyRadioButton.Size = new System.Drawing.Size(89, 24);
+            this.easyRadioButton.TabIndex = 3;
+            this.easyRadioButton.Text = "Просто";
+            this.easyRadioButton.UseVisualStyleBackColor = true;
             // 
-            // numericUpDown1
+            // numOfTasksLabel
             // 
-            this.numericUpDown1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.numericUpDown1.Location = new System.Drawing.Point(266, 3);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(257, 26);
-            this.numericUpDown1.TabIndex = 1;
-            this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
+            this.numOfTasksLabel.AutoSize = true;
+            this.numOfTasksLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.numOfTasksLabel.Location = new System.Drawing.Point(3, 0);
+            this.numOfTasksLabel.Name = "numOfTasksLabel";
+            this.numOfTasksLabel.Size = new System.Drawing.Size(67, 20);
+            this.numOfTasksLabel.TabIndex = 0;
+            this.numOfTasksLabel.Text = "Кол-во";
             // 
-            // radioButton1
+            // numOfTasks
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.radioButton1.Location = new System.Drawing.Point(3, 52);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(92, 24);
-            this.radioButton1.TabIndex = 2;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Сложно";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.numOfTasks.Dock = System.Windows.Forms.DockStyle.Top;
+            this.numOfTasks.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.numOfTasks.Location = new System.Drawing.Point(266, 3);
+            this.numOfTasks.Maximum = new decimal(new int[] {
+            15,
+            0,
+            0,
+            0});
+            this.numOfTasks.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numOfTasks.Name = "numOfTasks";
+            this.numOfTasks.Size = new System.Drawing.Size(257, 26);
+            this.numOfTasks.TabIndex = 1;
+            this.numOfTasks.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
-            // radioButton2
+            // hardRadioButton
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.radioButton2.Location = new System.Drawing.Point(266, 52);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(89, 24);
-            this.radioButton2.TabIndex = 3;
-            this.radioButton2.Text = "Просто";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.hardRadioButton.AutoSize = true;
+            this.hardRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.hardRadioButton.Location = new System.Drawing.Point(3, 53);
+            this.hardRadioButton.Name = "hardRadioButton";
+            this.hardRadioButton.Size = new System.Drawing.Size(92, 24);
+            this.hardRadioButton.TabIndex = 2;
+            this.hardRadioButton.TabStop = true;
+            this.hardRadioButton.Text = "Сложно";
+            this.hardRadioButton.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // createTaskButton
             // 
-            this.tableLayoutPanel3.SetColumnSpan(this.button1, 2);
-            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.button1.Location = new System.Drawing.Point(3, 101);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(520, 46);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Создать задание";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(39, 20);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(88, 20);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Фамилия";
-            // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(84, 80);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(43, 20);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Имя";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
-            // 
-            // label4
-            // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(36, 140);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(91, 20);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Отчество";
-            // 
-            // label5
-            // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(68, 201);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(59, 20);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "Класс";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBox1.Location = new System.Drawing.Point(133, 17);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(300, 26);
-            this.textBox1.TabIndex = 4;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // textBox2
-            // 
-            this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBox2.Location = new System.Drawing.Point(133, 77);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(300, 26);
-            this.textBox2.TabIndex = 5;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBox3.Location = new System.Drawing.Point(133, 137);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(300, 26);
-            this.textBox3.TabIndex = 6;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "9А",
-            "9Б",
-            "10А",
-            "10Б"});
-            this.comboBox1.Location = new System.Drawing.Point(133, 197);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(300, 28);
-            this.comboBox1.TabIndex = 7;
+            this.tableLayoutPanel3.SetColumnSpan(this.createTaskButton, 2);
+            this.createTaskButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.createTaskButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.createTaskButton.Location = new System.Drawing.Point(3, 103);
+            this.createTaskButton.Name = "createTaskButton";
+            this.createTaskButton.Size = new System.Drawing.Size(520, 44);
+            this.createTaskButton.TabIndex = 4;
+            this.createTaskButton.Text = "Создать задание";
+            this.createTaskButton.UseVisualStyleBackColor = true;
+            this.createTaskButton.Click += new System.EventHandler(this.createTaskButton_Click);
             // 
             // Form1
             // 
@@ -305,8 +312,15 @@ namespace Lab1_Sem3_Galin_Mihail
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(534, 491);
             this.Controls.Add(this.splitContainer1);
+            this.Cursor = System.Windows.Forms.Cursors.Default;
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(550, 530);
+            this.MinimumSize = new System.Drawing.Size(550, 530);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.ShowIcon = false;
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "PupilForm";
             this.splitContainer1.Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
@@ -317,7 +331,7 @@ namespace Lab1_Sem3_Galin_Mihail
             this.panel1.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numOfTasks)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -330,19 +344,19 @@ namespace Lab1_Sem3_Galin_Mihail
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label numOfTasksLabel;
+        private System.Windows.Forms.NumericUpDown numOfTasks;
+        private System.Windows.Forms.RadioButton easyRadioButton;
+        private System.Windows.Forms.RadioButton hardRadioButton;
+        private System.Windows.Forms.Button createTaskButton;
+        private System.Windows.Forms.Label lastNameLabel;
+        private System.Windows.Forms.Label firstNameLabel;
+        private System.Windows.Forms.Label patronymicLabel;
+        private System.Windows.Forms.Label classLabel;
+        private System.Windows.Forms.TextBox lastNameBox;
+        private System.Windows.Forms.TextBox firstNameBox;
+        private System.Windows.Forms.TextBox patronymicBox;
+        private System.Windows.Forms.ComboBox classBox;
     }
 }
 
