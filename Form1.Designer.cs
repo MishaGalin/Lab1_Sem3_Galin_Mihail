@@ -304,7 +304,7 @@ namespace Lab1_Sem3_Galin_Mihail
             this.createTaskButton.TabIndex = 4;
             this.createTaskButton.Text = "Создать задание";
             this.createTaskButton.UseVisualStyleBackColor = true;
-            this.createTaskButton.Click += new System.EventHandler(this.createTaskButton_Click);
+            this.createTaskButton.Click += new System.EventHandler(this.CreateTaskButton_Click);
             // 
             // Form1
             // 

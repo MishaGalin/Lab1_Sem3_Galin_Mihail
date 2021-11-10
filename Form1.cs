@@ -10,11 +10,11 @@ namespace Lab1_Sem3_Galin_Mihail
             InitializeComponent();
         }
 
-        private void createTaskButton_Click(object sender, EventArgs e)
+        private void CreateTaskButton_Click(object sender, EventArgs e)
         {
             if (firstNameBox.Text.Length == 0 || lastNameBox.Text.Length == 0 || patronymicBox.Text.Length == 0 || !classBox.Items.Contains(classBox.Text))
             {
-                MessageBox.Show("Введите все данные корректно");
+                MessageBox.Show("Введите все данные корректно!");
                 return;
             }
             TaskForm form2 = new TaskForm(firstNameBox.Text + " " + lastNameBox.Text + " " + patronymicBox.Text, classBox.Text, numOfTasks.Value);
