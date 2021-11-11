@@ -14,10 +14,16 @@ namespace Lab1_Sem3_Galin_Mihail
         {
             if (firstNameBox.Text.Length == 0 || lastNameBox.Text.Length == 0 || patronymicBox.Text.Length == 0 || !classBox.Items.Contains(classBox.Text))
             {
-                MessageBox.Show("Введите все данные корректно!");
+                MessageBox.Show("Введите все данные корректно.");
                 return;
             }
-            TaskForm form2 = new TaskForm(firstNameBox.Text + " " + lastNameBox.Text + " " + patronymicBox.Text, classBox.Text, numOfTasks.Value);
+            if (!easyRadioButton.Checked && !hardRadioButton.Checked)
+            {
+                MessageBox.Show("Выберите сложность.");
+                return;
+            }
+            string info = firstNameBox.Text + " " + lastNameBox.Text + " " + patronymicBox.Text;
+            TaskForm form2 = new TaskForm(info, classBox.Text, numOfTasks.Value, easyRadioButton.Checked, hardRadioButton.Checked);
             form2.Show();
         }
     }
